@@ -40,8 +40,8 @@ O sistema é dividido em duas partes principais:
 
 1. Clone o repositório:
    ```bash
-   git clone https://seu-repositorio.git
-   cd encurtador-de-urls
+   git clone https://github.com/rngando/Incurtador_de_URLs
+   cd Incurtador_de_URLs
    ```
 
 2. Instale as dependências:
