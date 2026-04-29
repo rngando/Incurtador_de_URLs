@@ -58,7 +58,6 @@ app.get("/:code", async (req, res) => {
         if (!url) {
             return res.status(404).json({ error: "URL não encontrada" })
         }
-
         // Redirecionamento real
         res.redirect(url.url_long)
 
@@ -67,4 +66,4 @@ app.get("/:code", async (req, res) => {
     }
 })
 
-module.exports = app; // Correto para CommonJS
+module.exports = app
