@@ -1,6 +1,6 @@
 
 const { Sequelize, DataTypes } = require('sequelize')
-const { logger } = require('sequelize/lib/utils/logger')
+
 
 const sequelize = new Sequelize({ 
     dialect: 'sqlite', 
