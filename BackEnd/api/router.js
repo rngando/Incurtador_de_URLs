@@ -1,6 +1,8 @@
 
 const express = require("express")
 const { sequelize, Url } = require("../models/db")
+const { generateUniqueId } = require("../utils/code")
+
 
 
 try {
@@ -23,7 +25,7 @@ app.post("/shorten", async (req, res) => {
     const urlLong = await req.body.url
     
     try {
-        const urlShort = Math.random().toString(36).substring(2, 8) // Gera um código curto aleatório
+        const urlShort = await generateUniqueId(Url)
         const newUrl = await Url.create({ url_long: urlLong, url_short: urlShort })
         res.status(201).json({ url_short: urlShort })
     } catch (error) {
